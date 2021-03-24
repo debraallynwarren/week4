@@ -1,0 +1,214 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 1em;
+    font-size: 16pt;
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: repeat (auto, 11);
+    grid-template-areas: 
+        "sec-shopping-cart"    
+        "sidebar"
+        "header"
+        "main"
+        "sec1"
+        "sec2"
+        "sec3"     
+        "sec4"
+        "sec5"
+        "sec6"
+        "footer";
+}
+
+header {
+    grid-area: header;
+    background-color: black;   
+}
+
+aside {
+    grid-area: sidebar;
+    padding-left: 0;
+    border: 1px solid gray;
+}
+
+main {
+    grid-area: main;    
+    background-image: url("https://res.cloudinary.com/devra29/image/upload/c_scale,o_40,w_2888/v1616437003/pexels-anthony-794494_innqu9.jpg") ;
+	background-position: center;
+    max-width: 100%;
+    border: 1px solid gray;
+    
+}
+
+.section-border {
+    border: 1px solid rgb(173, 171, 171);
+}
+
+section:nth-of-type(1) {
+    grid-area: sec1; 
+}
+   
+section:nth-of-type(2){
+    grid-area: sec2;
+}
+
+section:nth-of-type(3){
+    grid-area: sec3;
+    
+}
+
+section:nth-of-type(4){
+    grid-area: sec4;
+    
+}
+
+section:nth-of-type(5){
+    grid-area: sec5;
+   
+}
+
+section:nth-of-type(6){
+    grid-area: sec6;
+    
+}
+
+footer {
+    grid-area: footer;
+    background-color: black;
+    color: white;
+} 
+
+h1 {
+    font-size: 6vw;
+    font-weight: 900;
+    color: rgb(20, 20, 20);
+    text-align: left;
+    padding: 0 0 0 .5em;
+}
+
+h2 {
+    Font-size: 2vw;
+    padding: .5em;
+}
+ .header-text {
+    color: rgb(20, 20, 20);
+    text-align: left;
+    padding: 0 0 0 2em;
+ }
+.p-offer {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+.logo-text {
+    font-family: 'Lora', serif;
+    font-size: 8vw;
+    color: #1e137a;
+    font-weight: bolder;
+    margin-top: 0;
+    padding-left:.5em;
+}
+
+ul, li {
+    margin: 0;
+    padding: .5; 
+    list-style: none;
+    font-size: 4vw;
+    
+}
+li {
+    display: inline;
+}
+
+.vertical-menu {
+    text-decoration: none;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin:.25em 1em;
+    padding:0;
+}
+
+.padding {
+    margin: 0 0 .5em .5em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.shipping {
+    color: white;
+    text-decoration: underline;
+}
+.img-products {
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding-top: 1em; 
+}
+.products {
+    width: 80%;
+    text-align: justified;
+    display: block;
+    margin: auto;
+    padding-top: 1em; 
+}
+
+p {
+    font-size: 1em;
+}
+.copy-right-text {
+    font-size: .75em;
+    padding: 1em;
+}
+
+@media only screen and (min-width: 765px) {
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: auto 35% 35%;
+        grid-template-rows: auto auto auto auto auto 10%;
+        grid-template-areas: 
+            "sidebar   header        header "
+            "sidebar   main          main"
+            "sidebar   sec1          sec2"
+            "sidebar   sec3          sec4"
+            "sidebar   sec5          sec6"
+            "footer    footer        footer";
+    }
+    .logo-text {
+        font-family: 'Lora', serif;
+        font-size: 4vw;
+        color: #1e137a;
+        font-weight: bolder;
+        margin-top: 0;  
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0 0 .25em 0; 
+        display: block;
+        font-size: 2.25vw;
+    }
+    
+    .vertical-menu {
+        display: block; 
+        font-size: 1.25em; 
+        text-decoration: none;
+    }
+    aside {
+        border-right: 1px solid gray;
+    }
+}
+
+
