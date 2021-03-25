@@ -1,3 +1,4 @@
+/* Body and html */
 body, html {
     margin: 0;
     padding: 0;
@@ -6,14 +7,13 @@ body, html {
 }
 
 body {
-    margin: 0;
+    
     padding: 1em;
     font-size: 16pt;
     display: grid;
     grid-template-columns:100%;
-    grid-template-rows: repeat (auto, 11);
-    grid-template-areas: 
-        "sec-shopping-cart"    
+    grid-template-rows: repeat (auto, 10);
+    grid-template-areas:   
         "sidebar"
         "header"
         "main"
@@ -26,28 +26,23 @@ body {
         "footer";
 }
 
+
+/* Grid Areas */
+
+aside {
+    grid-area: sidebar;
+    border: 1px solid gray;
+}
+
 header {
     grid-area: header;
     background-color: black;   
 }
 
-aside {
-    grid-area: sidebar;
-    padding-left: 0;
-    border: 1px solid gray;
-}
-
 main {
     grid-area: main;    
     background-image: url("https://res.cloudinary.com/devra29/image/upload/c_scale,o_40,w_2888/v1616437003/pexels-anthony-794494_innqu9.jpg") ;
-	background-position: center;
-    max-width: 100%;
-    border: 1px solid gray;
-    
-}
-
-.section-border {
-    border: 1px solid rgb(173, 171, 171);
+	background-position: center;  
 }
 
 section:nth-of-type(1) {
@@ -59,23 +54,23 @@ section:nth-of-type(2){
 }
 
 section:nth-of-type(3){
-    grid-area: sec3;
-    
+    grid-area: sec3;  
 }
 
 section:nth-of-type(4){
-    grid-area: sec4;
-    
+    grid-area: sec4; 
 }
 
 section:nth-of-type(5){
-    grid-area: sec5;
-   
+    grid-area: sec5;   
 }
 
 section:nth-of-type(6){
-    grid-area: sec6;
-    
+    grid-area: sec6;  
+}
+
+.section-border {
+    border: 1px solid rgb(173, 171, 171);
 }
 
 footer {
@@ -83,6 +78,17 @@ footer {
     background-color: black;
     color: white;
 } 
+
+/* Font Sizes and color */
+
+.aside_text {
+    font-family: 'Lora', serif;
+    font-size: 8vw;
+    color: #1e137a;
+    font-weight: bolder;
+    margin-top: 0;
+    padding-left:.5em;
+}
 
 h1 {
     font-size: 6vw;
@@ -93,41 +99,53 @@ h1 {
 }
 
 h2 {
-    Font-size: 2vw;
+    font-size: 5vw;
     padding: .5em;
+    text-align: center;
 }
- .header-text {
-    color: rgb(20, 20, 20);
-    text-align: left;
-    padding: 0 0 0 2em;
- }
-.p-offer {
+
+p {
     font-size: 1em;
+}
+
+.header_offer {
+    font-size: .75em;
     color: white;
     text-align: center;
 }
 
-.logo-text {
-    font-family: 'Lora', serif;
-    font-size: 8vw;
-    color: #1e137a;
-    font-weight: bolder;
-    margin-top: 0;
-    padding-left:.5em;
+.header_link {
+    color: white;
+    text-decoration: underline;
 }
+
+.main_text {
+    color: rgb(20, 20, 20);
+    text-align: left;
+    padding: 0 0 0 2em;
+    font-weight: bold;
+    font-size: .75em;
+ }
+
+ .footer_text {
+    font-size: .75em;
+    padding: 1em;
+}
+
+/* Menu */
 
 ul, li {
     margin: 0;
     padding: .5; 
     list-style: none;
-    font-size: 4vw;
-    
+    font-size: 4vw; 
 }
+
 li {
     display: inline;
 }
 
-.vertical-menu {
+.aside_menu {
     text-decoration: none;
     display:flex;
     justify-content: space-between;
@@ -136,27 +154,19 @@ li {
     padding:0;
 }
 
-.padding {
-    margin: 0 0 .5em .5em;
-}
-
 a {
     text-decoration: none;
     color: #000;
 }
 
-.shipping {
-    color: white;
-    text-decoration: underline;
+
+/* Padding, Margins and Alignment */
+
+.padding {
+    margin: 0 0 .5em .5em;
 }
-.img-products {
-    width: 80%;
-    text-align: center;
-    display: block;
-    margin: auto;
-    padding-top: 1em; 
-}
-.products {
+
+.article_alignment {
     width: 80%;
     text-align: justified;
     display: block;
@@ -164,12 +174,29 @@ a {
     padding-top: 1em; 
 }
 
-p {
-    font-size: 1em;
+
+/* Images*/
+
+.img_products {
+    width: 80%;
+    text-align: center;
+    display: block;
+    margin: auto;
+    padding-top: 1em; 
 }
-.copy-right-text {
-    font-size: .75em;
-    padding: 1em;
+
+
+/* Buttons*/
+button{
+    display: block;
+    margin: 0 auto;
+    padding: .5em 1em;
+    background-color: #132f74;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;  
 }
 
 @media only screen and (min-width: 765px) {
@@ -186,13 +213,19 @@ p {
             "sidebar   sec5          sec6"
             "footer    footer        footer";
     }
-    .logo-text {
-        font-family: 'Lora', serif;
-        font-size: 4vw;
-        color: #1e137a;
-        font-weight: bolder;
-        margin-top: 0;  
+
+    /* Font Sizes and color */
+
+    h2 {
+        font-size: 2vw;
     }
+
+    .main_text {
+        font-size:2vw;
+     }
+
+
+    /* Menu */
 
     ul, li {
         margin: 0;
@@ -200,8 +233,12 @@ p {
         display: block;
         font-size: 2.25vw;
     }
-    
-    .vertical-menu {
+
+    .aside_text {
+        font-size: 4vw;     
+    }
+
+    .aside_menu {
         display: block; 
         font-size: 1.25em; 
         text-decoration: none;
@@ -209,6 +246,7 @@ p {
     aside {
         border-right: 1px solid gray;
     }
+    
 }
 
 
